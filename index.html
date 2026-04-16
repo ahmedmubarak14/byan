@@ -1481,27 +1481,29 @@
     @media (max-width: 560px) {
       .site-header {
         border-bottom: 0;
-        box-shadow: 0 10px 30px rgba(16, 16, 16, 0.05);
+        box-shadow: 0 8px 18px rgba(16, 16, 16, 0.04);
       }
 
       .nav {
         grid-template-columns: minmax(0, 1fr) auto;
-        gap: 10px;
-        padding: 10px 0 12px;
+        gap: 8px;
+        padding: 8px 0 10px;
       }
 
       .brand {
-        gap: 10px;
+        gap: 8px;
+        align-items: center;
       }
 
       .brand-mark {
-        width: 46px;
+        width: 42px;
       }
 
       .brand-copy {
-        font-size: 17px;
+        font-size: 15px;
         white-space: normal;
-        line-height: 1.05;
+        line-height: 1;
+        max-width: 10ch;
       }
 
       .nav-actions {
@@ -1514,49 +1516,58 @@
       }
 
       .lang-toggle {
-        min-width: 46px;
-        padding: 0 14px;
+        min-width: 42px;
+        min-height: 42px;
+        padding: 0 12px;
+        font-size: 12px;
       }
 
       .nav-links {
         gap: 6px;
-        padding: 6px;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
       }
 
       .nav-link {
-        padding: 9px 12px;
-        font-size: 13px;
+        min-height: 34px;
+        padding: 8px 10px;
+        font-size: 12px;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(16, 16, 16, 0.06);
       }
 
       section {
-        padding: 26px 0;
+        padding: 22px 0;
       }
 
       .hero {
-        padding: 22px 0 20px;
+        padding: 14px 0 18px;
       }
 
       .hero-panel {
         border-radius: 30px;
-        padding: 18px;
+        padding: 16px;
       }
 
       .eyebrow {
-        min-height: 36px;
-        padding: 0 12px;
-        font-size: 11px;
+        min-height: 34px;
+        padding: 0 10px;
+        font-size: 10px;
       }
 
       .hero-visual {
-        gap: 12px;
+        gap: 10px;
+        order: 0;
       }
 
       .hero-person-card {
-        border-radius: 26px;
+        border-radius: 24px;
       }
 
       .hero-person-card img {
-        min-height: 280px;
+        min-height: 220px;
         object-position: center top;
       }
 
@@ -1566,7 +1577,7 @@
       }
 
       .hero-metrics {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: none;
       }
 
       .metric-card {
@@ -1587,26 +1598,28 @@
       .mwrd-note,
       .pillar-copy,
       .service-copy {
-        font-size: 14px;
-        line-height: 1.65;
+        font-size: 13px;
+        line-height: 1.58;
       }
 
       .hero-title {
-        font-size: clamp(34px, 11.5vw, 46px);
-        margin: 12px 0 14px;
-        max-width: 8.5ch;
+        font-size: clamp(30px, 10.5vw, 40px);
+        margin: 10px 0 12px;
+        max-width: 8ch;
         line-height: 0.94;
       }
 
       .hero-actions {
-        gap: 10px;
+        margin-top: 18px;
+        gap: 8px;
       }
 
       .button-primary,
       .button-secondary {
         width: 100%;
-        min-height: 50px;
+        min-height: 46px;
         padding: 0 16px;
+        font-size: 13px;
       }
 
       .hero-highlights {
@@ -1621,7 +1634,7 @@
 
       .section-header {
         gap: 14px;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
 
       .about-grid,
@@ -1717,11 +1730,11 @@
 
       .mwrd-frame-shell {
         border-radius: 24px;
-        padding: 14px;
+        padding: 12px;
       }
 
       .mwrd-frame {
-        height: 320px;
+        height: 300px;
         border-radius: 20px;
       }
 
@@ -1876,16 +1889,29 @@
       }
 
       .brand-copy {
-        font-size: 16px;
+        font-size: 14px;
+        max-width: 9ch;
       }
 
       .nav-link {
-        padding: 8px 10px;
-        font-size: 12px;
+        padding: 7px 9px;
+        font-size: 11px;
       }
 
       .hero-title {
-        font-size: clamp(32px, 11vw, 40px);
+        font-size: clamp(28px, 10vw, 36px);
+      }
+
+      .hero-person-card img {
+        min-height: 200px;
+      }
+
+      .eyebrow {
+        font-size: 9.5px;
+      }
+
+      .hero-copy p {
+        font-size: 12.5px;
       }
 
       .metric-card {
