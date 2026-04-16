@@ -436,32 +436,6 @@
       line-height: 1.6;
     }
 
-    .logo-belt {
-      padding: 26px 0 14px;
-    }
-
-    .logo-belt-inner {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      justify-content: center;
-    }
-
-    .logo-pill {
-      min-height: 44px;
-      padding: 0 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.68);
-      border: 1px solid rgba(16, 16, 16, 0.06);
-      color: var(--muted);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: 800;
-      box-shadow: 0 14px 30px rgba(16, 16, 16, 0.04);
-    }
-
     section {
       padding: 42px 0;
     }
@@ -639,30 +613,25 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
       margin-top: 28px;
     }
 
     .service-card {
-      grid-column: span 4;
       position: relative;
       overflow: hidden;
-      min-height: 356px;
-      border-radius: 28px;
-      padding: 20px;
+      min-height: 340px;
+      border-radius: 30px;
+      padding: 22px;
       background: rgba(255, 255, 255, 0.96);
       color: var(--ink);
       border: 1px solid rgba(16, 16, 16, 0.08);
       box-shadow: 0 24px 56px rgba(16, 16, 16, 0.12);
       display: grid;
       grid-template-rows: auto auto 1fr auto;
-      gap: 14px;
+      gap: 16px;
       transition: transform 0.28s ease, box-shadow 0.28s ease;
-    }
-
-    .service-card:nth-child(7) {
-      grid-column: span 8;
     }
 
     .service-card:hover {
@@ -678,23 +647,23 @@
     }
 
     .service-title {
-      font-size: 30px;
+      font-size: 32px;
       line-height: 1.02;
       letter-spacing: -0.05em;
       margin: 0;
-      max-width: 9ch;
+      min-height: 2.2em;
     }
 
     .service-copy {
       margin: 0;
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.72;
+      font-size: 14px;
+      line-height: 1.7;
     }
 
     .service-visual {
       position: relative;
-      min-height: 146px;
+      min-height: 150px;
       border-radius: 24px;
       background: linear-gradient(180deg, #1b1b1b 0%, #25201d 100%);
       border: 1px solid rgba(16, 16, 16, 0.06);
@@ -707,74 +676,15 @@
       inset: 0;
       background-size: cover;
       background-position: center;
-      transform: scale(1.02);
-      filter: saturate(0.92) contrast(1.02);
+      transform: scale(1.01);
+      filter: saturate(1.02) contrast(1.04) brightness(1.02);
     }
 
     .service-visual-media::after {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(180deg, rgba(16, 16, 16, 0.16) 0%, rgba(16, 16, 16, 0.42) 54%, rgba(16, 16, 16, 0.78) 100%),
-        radial-gradient(circle at 18% 18%, rgba(201, 239, 123, 0.22), transparent 28%);
-    }
-
-    .service-visual::before,
-    .service-visual::after {
-      content: "";
-      position: absolute;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .service-visual::before {
-      width: 92px;
-      height: 92px;
-      right: 16px;
-      top: 18px;
-      z-index: 1;
-    }
-
-    .service-visual::after {
-      width: 48px;
-      height: 48px;
-      left: 18px;
-      bottom: 18px;
-      z-index: 1;
-    }
-
-    .service-visual-inner {
-      position: relative;
-      z-index: 2;
-      height: 100%;
-      display: grid;
-      align-content: space-between;
-    }
-
-    .service-visual-label {
-      font-size: 12px;
-      font-weight: 800;
-      color: rgba(255, 255, 255, 0.62);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .service-visual-shape {
-      align-self: end;
-      justify-self: end;
-      width: 88px;
-      height: 88px;
-      border-radius: 24px;
-      border: 1.5px solid rgba(201, 239, 123, 0.86);
-      background: rgba(16, 16, 16, 0.22);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(6px);
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-size: 30px;
-      font-weight: 800;
+      background: linear-gradient(180deg, rgba(16, 16, 16, 0.04) 0%, rgba(16, 16, 16, 0.12) 55%, rgba(16, 16, 16, 0.24) 100%);
     }
 
     .service-tags {
@@ -830,40 +740,6 @@
       display: grid;
       gap: 12px;
       margin-top: 8px;
-    }
-
-    .mwrd-clients-block {
-      margin-top: 8px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .mwrd-clients-label {
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .mwrd-clients-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .mwrd-client-pill {
-      min-height: 40px;
-      padding: 0 14px;
-      border-radius: 999px;
-      background: rgba(16, 16, 16, 0.04);
-      border: 1px solid rgba(16, 16, 16, 0.08);
-      color: var(--ink);
-      display: inline-flex;
-      align-items: center;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
     }
 
     .mwrd-bullet {
@@ -945,11 +821,11 @@
     }
 
     .mwrd-frame iframe {
-      width: 142%;
-      height: 142%;
+      width: 160%;
+      height: 160%;
       border: 0;
       pointer-events: none;
-      transform: scale(0.698) translate(-2.5%, 0%);
+      transform: scale(0.622) translate(-1.6%, 0%);
       transform-origin: top left;
       background: #fff;
       display: block;
@@ -1358,7 +1234,7 @@
 
     [dir="rtl"] .mwrd-frame iframe {
       transform-origin: top right;
-      transform: scale(0.698) translate(2.5%, 0%);
+      transform: scale(0.622) translate(1.6%, 0%);
     }
 
     [dir="rtl"] .hero-person-card img,
@@ -1373,8 +1249,6 @@
     [dir="rtl"] .nav-links,
     [dir="rtl"] .hero-actions,
     [dir="rtl"] .hero-highlights,
-    [dir="rtl"] .logo-belt-inner,
-    [dir="rtl"] .mwrd-clients-row,
     [dir="rtl"] .mwrd-bottom,
     [dir="rtl"] .mwrd-mini-tags,
     [dir="rtl"] .values-list,
@@ -1394,9 +1268,7 @@
 
     [dir="rtl"] .section-kicker,
     [dir="rtl"] .float-label,
-    [dir="rtl"] .service-visual-label,
-    [dir="rtl"] .contact-item-label,
-    [dir="rtl"] .mwrd-clients-label {
+    [dir="rtl"] .contact-item-label {
       letter-spacing: 0;
       text-transform: none;
     }
@@ -1438,11 +1310,6 @@
       .services-grid,
       .industries-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .service-card,
-      .service-card:nth-child(7) {
-        grid-column: auto;
       }
 
       .hero-person-card img {
@@ -1515,13 +1382,13 @@
       }
 
       .mwrd-frame iframe {
-        width: 176%;
-        height: 176%;
-        transform: scale(0.57) translate(-3%, 0%);
+        width: 188%;
+        height: 188%;
+        transform: scale(0.53) translate(-2%, 0%);
       }
 
       [dir="rtl"] .mwrd-frame iframe {
-        transform: scale(0.57) translate(3%, 0%);
+        transform: scale(0.53) translate(2%, 0%);
       }
 
       .section-header {
@@ -1650,12 +1517,6 @@
         </div>
       </section>
 
-      <section class="logo-belt">
-        <div class="container">
-          <div class="logo-belt-inner" id="logoBelt"></div>
-        </div>
-      </section>
-
       <section id="about">
         <div class="container section-panel" data-reveal>
           <div class="about-grid">
@@ -1708,11 +1569,6 @@
               </p>
 
               <div class="mwrd-bullets" id="mwrdBullets"></div>
-
-              <div class="mwrd-clients-block">
-                <div class="mwrd-clients-label" id="mwrdClientsLabel">Our clients</div>
-                <div class="mwrd-clients-row" id="mwrdClients"></div>
-              </div>
 
               <div class="hero-actions">
                 <a class="button-primary" href="https://ahmedmubarak14.github.io/mwrd-landigpage/" target="_blank" rel="noreferrer" id="mwrdPrimary">Visit mwrd.io</a>
@@ -1979,8 +1835,6 @@
               copy: "Procure smarter with clearer visibility, faster cycles, and less day-to-day purchasing overhead."
             }
           ],
-          clientsLabel: "Our clients",
-          clients: ["RAKIZ", "Zid", "Qubit", "SalesUp"],
           primary: "Visit mwrd.io",
           secondary: "Talk to us about procurement",
           topbar: "Live product preview",
@@ -2192,8 +2046,6 @@
               copy: "وقت أقل في الشراء، وتكلفة أقل، وتحكم أعلى في كل خطوة."
             }
           ],
-          clientsLabel: "عملاؤنا",
-          clients: ["راكيز", "زيد", "كوبيت", "سيلز أب"],
           primary: "زيارة mwrd.io",
           secondary: "تحدث معنا عن المشتريات",
           topbar: "معاينة مباشرة للمنتج",
@@ -2272,22 +2124,21 @@
       "https://cdn.hala.com/website/images/home/home-lady.png";
     const aboutImageUrl =
       "https://firebasestorage.googleapis.com/v0/b/standards-site-beta.appspot.com/o/documents%2Fd2n52d1l8uy%2F72b4eea4275%2Farabsstock_131434_large.jpg?alt=media&token=810b3f70-85fa-4167-82eb-b4bf80a93945";
-    const serviceImageTech =
-      "https://firebasestorage.googleapis.com/v0/b/standards-site-beta.appspot.com/o/documents%2Fd2n52d1l8uy%2F72b4eea4275%2Farabsstock_67888_large%20copy-Edit.jpg?alt=media&token=ab3fddc4-5275-48a7-9611-85854f839f87";
-    const serviceImageOps =
-      "https://firebasestorage.googleapis.com/v0/b/standards-site-beta.appspot.com/o/documents%2Fd2n52d1l8uy%2F72b4eea4275%2Farabsstock_111087_large.jpg?alt=media&token=1f3f9092-e60f-4d6c-ac01-7739acfd6dad";
-    const serviceImageLogistics =
-      "https://firebasestorage.googleapis.com/v0/b/standards-site-beta.appspot.com/o/documents%2Fd2n52d1l8uy%2F72b4eea4275%2Farabsstock_131325_large-2.jpg?alt=media&token=4f47ddcd-0ef9-4e85-9990-91e7444f9419";
-    const serviceImageTalent =
-      "https://firebasestorage.googleapis.com/v0/b/standards-site-beta.appspot.com/o/documents%2Fd2n52d1l8uy%2F72b4eea4275%2Farabsstock_164287_large.jpg?alt=media&token=2fee383e-aad7-4683-b393-8177fb1b1906";
+    const serviceImageDigital = "./assets/images/digital-marketing.jpg";
+    const serviceImageWeb = "./assets/images/web-mobile.jpg";
+    const serviceImageCloud = "./assets/images/cloud-erp-crm.jpg";
+    const serviceImageCreative = "./assets/images/uiux-creative.jpg";
+    const serviceImageResearch = "./assets/images/market-research.png";
+    const serviceImageTalent = "./assets/images/manpower-outsourcing.jpg";
+    const serviceImageLogistics = "./assets/images/procurement-logistics.jpg";
 
     const serviceVisualThemes = [
-      { accent: "#d8f57f", background: "linear-gradient(180deg,#171717 0%,#221c1a 100%)", image: serviceImageTech, position: "center 26%" },
-      { accent: "#81dff4", background: "linear-gradient(180deg,#14181b 0%,#1d2628 100%)", image: aboutImageUrl, position: "center 18%" },
-      { accent: "#ffd081", background: "linear-gradient(180deg,#1b1815 0%,#262019 100%)", image: serviceImageOps, position: "center 20%" },
-      { accent: "#b9a2ff", background: "linear-gradient(180deg,#171519 0%,#221c27 100%)", image: heroImageUrl, position: "center 14%" },
-      { accent: "#ff9e84", background: "linear-gradient(180deg,#1a1514 0%,#241c1a 100%)", image: serviceImageTech, position: "58% 22%" },
-      { accent: "#93e3bb", background: "linear-gradient(180deg,#141816 0%,#1b2420 100%)", image: serviceImageTalent, position: "center 16%" },
+      { accent: "#d8f57f", background: "linear-gradient(180deg,#171717 0%,#221c1a 100%)", image: serviceImageDigital, position: "center 46%" },
+      { accent: "#7bd6e7", background: "linear-gradient(180deg,#14181b 0%,#1d2628 100%)", image: serviceImageWeb, position: "center 28%" },
+      { accent: "#ffc57a", background: "linear-gradient(180deg,#1b1815 0%,#262019 100%)", image: serviceImageCloud, position: "center 34%" },
+      { accent: "#ff8f72", background: "linear-gradient(180deg,#171519 0%,#221c27 100%)", image: serviceImageCreative, position: "center 42%" },
+      { accent: "#7ac4ff", background: "linear-gradient(180deg,#1a1514 0%,#241c1a 100%)", image: serviceImageResearch, position: "center center" },
+      { accent: "#8ee0b3", background: "linear-gradient(180deg,#141816 0%,#1b2420 100%)", image: serviceImageTalent, position: "center 26%" },
       { accent: "#9fd4ff", background: "linear-gradient(180deg,#131619 0%,#1d2328 100%)", image: serviceImageLogistics, position: "center center" }
     ];
 
@@ -2323,21 +2174,6 @@
         visualMedia.style.backgroundPosition = theme.position || "center";
         visual.appendChild(visualMedia);
       }
-
-      const visualInner = document.createElement("div");
-      visualInner.className = "service-visual-inner";
-
-      const visualLabel = document.createElement("div");
-      visualLabel.className = "service-visual-label";
-      visualLabel.textContent = service.visualLabel;
-
-      const visualShape = document.createElement("div");
-      visualShape.className = "service-visual-shape";
-      visualShape.style.borderColor = theme.accent;
-      visualShape.textContent = service.icon;
-
-      visualInner.append(visualLabel, visualShape);
-      visual.appendChild(visualInner);
 
       const tags = document.createElement("div");
       tags.className = "service-tags";
@@ -2456,10 +2292,6 @@
       heroMetrics.innerHTML = "";
       data.hero.metrics.forEach((metric) => heroMetrics.appendChild(createMetricCard(metric)));
 
-      const logoBelt = document.getElementById("logoBelt");
-      logoBelt.innerHTML = "";
-      data.logos.forEach((logo) => logoBelt.appendChild(createTag(logo, "logo-pill")));
-
       setText("aboutKicker", data.about.kicker);
       setText("aboutTitle", data.about.title);
       setHtml("aboutBody", data.about.paragraphs.map((p) => `<p>${p}</p>`).join(""));
@@ -2491,15 +2323,10 @@
       setText("mwrdSecondary", data.mwrd.secondary);
       setText("mwrdTopbarLabel", data.mwrd.topbar);
       setText("mwrdFrameLink", data.mwrd.frameLink);
-      setText("mwrdClientsLabel", data.mwrd.clientsLabel);
 
       const mwrdBullets = document.getElementById("mwrdBullets");
       mwrdBullets.innerHTML = "";
       data.mwrd.bullets.forEach((bullet) => mwrdBullets.appendChild(createMwrdBullet(bullet)));
-
-      const mwrdClients = document.getElementById("mwrdClients");
-      mwrdClients.innerHTML = "";
-      data.mwrd.clients.forEach((client) => mwrdClients.appendChild(createTag(client, "mwrd-client-pill")));
 
       const mwrdTags = document.getElementById("mwrdTags");
       mwrdTags.innerHTML = "";
