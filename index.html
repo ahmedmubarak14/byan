@@ -104,21 +104,26 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       min-width: 0;
     }
 
     .brand-mark {
-      width: 112px;
+      width: 58px;
       height: auto;
       object-fit: contain;
+      filter: brightness(0) saturate(100%);
+      flex: 0 0 auto;
     }
 
     .brand-copy {
-      display: none;
-      font-size: 13px;
-      color: var(--muted);
-      letter-spacing: 0.02em;
+      display: inline-block;
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: -0.04em;
+      white-space: nowrap;
     }
 
     .nav-links {
@@ -1318,6 +1323,10 @@
       object-position: center top;
     }
 
+    [dir="rtl"] .brand {
+      flex-direction: row-reverse;
+    }
+
     [dir="rtl"] .nav-links,
     [dir="rtl"] .hero-actions,
     [dir="rtl"] .hero-highlights,
@@ -1350,6 +1359,11 @@
     [dir="rtl"] .hero-title {
       line-height: 1.02;
       max-width: 12ch;
+    }
+
+    [dir="rtl"] .brand-copy {
+      letter-spacing: 0;
+      font-size: 20px;
     }
 
     [dir="rtl"] .section-title,
@@ -1463,6 +1477,14 @@
     }
 
     @media (max-width: 560px) {
+      .brand-mark {
+        width: 50px;
+      }
+
+      .brand-copy {
+        font-size: 18px;
+      }
+
       .nav-actions {
         width: 100%;
         justify-content: center;
@@ -1764,7 +1786,7 @@
         pageTitle: "Byan Solutions | Integrated Business Solutions",
         pageDescription:
           "Byan Solutions delivers integrated business solutions across procurement, manpower, technology, and digital marketing in Saudi Arabia.",
-        brandCopy: "Integrated business solutions for Saudi companies.",
+        brandCopy: "Byan Solutions",
         nav: {
           about: "About",
           services: "Services",
@@ -1975,7 +1997,7 @@
         pageTitle: "بيان سولوشنز | حلول أعمال متكاملة",
         pageDescription:
           "من المشتريات والكوادر للتقنية والتسويق، بيان سولوشنز تتكفل بكل شيء وأنت تركّز على النمو.",
-        brandCopy: "كل ما تحتاجه شركتك، في مكان واحد.",
+        brandCopy: "بيان سولووشنز",
         nav: {
           about: "من نحن",
           services: "الخدمات",
